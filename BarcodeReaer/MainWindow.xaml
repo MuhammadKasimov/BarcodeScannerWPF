@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="BarcodeReaer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BarcodeReaer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Closing="Window_Closing"
+    Loaded="Window_Loaded"
+    ResizeMode="CanMinimize"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="10"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Text="Camera" />
+            <ComboBox
+                x:Name="CameraChooser"
+                Width="500"
+                Height="50"
+                Padding="0"
+                VerticalAlignment="Top"
+                FontSize="20"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}" />
+        </StackPanel>
+        <Image x:Name="ContentViewer" Margin="70" />
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="10"
+                VerticalAlignment="Center"
+                FontSize="20"
+                Text="Barcode" />
+            <TextBox
+                x:Name="BarcodeTxt"
+                Width="400"
+                Height="50"
+                Padding="0"
+                FontSize="20"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <Button
+                x:Name="StartBtn"
+                Width="100"
+                Height="50"
+                Click="StartBtn_Click"
+                Content="Start"
+                FontSize="20" />
+        </StackPanel>
+    </Grid>
+</Window>
